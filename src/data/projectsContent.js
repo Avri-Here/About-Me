@@ -9,7 +9,7 @@ import cav from "../images/CryptographyVisualizer.png"
 import placeholder from "../images/bg1.png";
 export const ProjectsContent = [
   {
-    link: "https://github.com/enjeck/TutCode",
+    link: "https://github.com/Avri-Here/TutCode",
     img: tutcode,
     name: "TutCode - site to simultaneously  view tutorials and code",
     excerpt: `A website where people can simultaneously code and watch/read
@@ -26,7 +26,7 @@ export const ProjectsContent = [
     tools: "React · CSS"
   },
   {
-    link: "https://enjeck.com/",
+    link: "https://Enjeck.com/",
     img: enjeck,
     name: "Personal Website",
     excerpt: `My personal website, designed and developed from scratch. It
@@ -34,7 +34,7 @@ export const ProjectsContent = [
     tools: "Gatsby · CSS"
   },
   {
-    link: "https://github.com/enjeck/libre-logos",
+    link: "https://github.com/Avri-Here/libre-logos",
     img: ll,
     name: "Libre Logos",
     excerpt: `A project to provide free logos to open source projects.
@@ -44,7 +44,7 @@ export const ProjectsContent = [
     tools: "Gatsby · CSS"
   },
   {
-    link: "https://github.com/enjeck/jpg2svg",
+    link: "https://github.com/Avri-Here/jpg2svg",
     img: jpg2svg,
     name: "jpg2svg",
     excerpt: `An program to convert JPG/JPEG images into SVG. It comes with a web interface where 
@@ -53,7 +53,7 @@ export const ProjectsContent = [
     tools: "JavaScript · Python"
   },
   {
-    link: "https://github.com/enjeck/CrazyPassword",
+    link: "https://github.com/Avri-Here/CrazyPassword",
     img: placeholder,
     name: "Crazy Password",
     excerpt: `A password validation game with ridiculous requirements. 
@@ -62,7 +62,7 @@ export const ProjectsContent = [
     tools: "Python"
   },
   {
-    link: "https://github.com/enjeck/Geo-Guess",
+    link: "https://github.com/Avri-Here/Geo-Guess",
     img: gg,
     name: "Geo Guess",
     excerpt: `A distance guessing game. You are shown random cities around the world,
@@ -71,7 +71,7 @@ export const ProjectsContent = [
     tools: "JavaScript · Python"
   },
   {
-    link: "https://github.com/enjeck/Blobby",
+    link: "https://github.com/Avri-Here/Blobby",
     img: blobby,
     name: "Blobby",
     excerpt: `Generative blob SVG characters using Python. No characters are the same! 
@@ -80,7 +80,7 @@ export const ProjectsContent = [
     tools: "JavaScript · Python"
   },
   {
-    link: "https://github.com/enjeck/Google-Sheet-to-website",
+    link: "https://github.com/Avri-Here/Google-Sheet-to-website",
     img: placeholder,
     name: "Google Sheet to Website",
     excerpt: `An experiment with building a website directly from Google Sheets. You edit a spreadsheet,
@@ -88,7 +88,7 @@ export const ProjectsContent = [
     tools: "JavaScript · PHP"
   },
   {
-    link: "https://github.com/enjeck/CryptoAlgoVisualizer",
+    link: "https://github.com/Avri-Here/CryptoAlgoVisualizer",
     img: cav,
     name: "Crypto Algorithm Visualizer",
     excerpt: `Visualizations of various cryptography algorithms. 
@@ -96,7 +96,7 @@ export const ProjectsContent = [
     tools: "JavaScript · CSS"
   },
   {
-    link: "https://github.com/enjeck/btns",
+    link: "https://github.com/Avri-Here/btns",
     img: placeholder,
     name: "btns",
     excerpt: `A collection of buttons with cool hover effects.`,

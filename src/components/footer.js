@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="country">
-        Cameroon
-      </div>
       <div className="footer-links">
         <div className="footer-links-section">
           <Link to="/about"> About </Link>

@@ -82,38 +82,35 @@ function Home() {
         </span>
         <span className="top-menu-item no-show-mobile">
           {" "}
-          <a href="https://github.com/enjeck"> GitHub </a>
+          <a href="https://github.com/Avri-Here"> GitHub </a>
         </span>
         <BoxMenuDrop />
         <ProfileMenuDrop />
       </div>
-     <div className="flex-center">
-      <div className="search-container">
-        <div className="frontpage-logo">
-          <Logo />
-        </div>
+      <div className="flex-center">
+        <div className="search-container">
+          <div className="frontpage-logo">
+            <Logo />
+          </div>
           <SearchBox options={options} />
-        <div className="search-btns">
-          <input
-            className="search-btn sw"
-            type="button"
-            value="Search Website"
-            onClick={searchWebsite}
-          />
-          <input
-            className="search-btn ifl"
-            type="button"
-            value="I'm Feeling Lucky"
-            onClick={feelingLucky}
-          />
+          <div className="search-btns">
+            <input
+              className="search-btn sw"
+              type="button"
+              value="Search Website"
+              onClick={searchWebsite}
+            />
+            <input
+              className="search-btn ifl"
+              type="button"
+              value="I'm Feeling Lucky"
+              onClick={feelingLucky}
+            />
+          </div>
         </div>
-      </div>
       </div>
 
       <footer className="footer">
-        <div className="country">
-          Cameroon
-        </div>
         <div className="footer-links">
           <div className="footer-links-section">
             <Link to="/about"> About </Link>
@@ -122,7 +119,7 @@ function Home() {
             <a href="mailto:Yoti1492@gmail.com"> Email </a>
           </div>
           <div className="footer-links-section">
-            <a href="https://github.com/enjeck"> GitHub </a>
+            <a href="https://github.com/Avri-Here"> GitHub </a>
             <a href="https://www.linkedin.com/in/c1e0/"> LinkedIn </a>
             <a href="mailto:Yoti1492@gmail.com"> Email </a>
             {/* <div className="settings-dropdown">

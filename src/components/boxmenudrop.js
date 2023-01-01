@@ -61,7 +61,7 @@ const BoxMenuDrop = () => {
             />
             <p> Search </p>
           </Link>
-          <a className="drop-link" href="https://docs.google.com/document/d/1IWAQSObE0iCIvH_oAI1wvzHuMpBtAZGZ/edit?usp=sharing&ouid=112982673713668978351&rtpof=true&sd=true" target="_blank"><img
+          <a className="drop-link" href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?usp=sharingoogle.com/document/d/1IWAQSObE0iCIvH_oAI1wvzHuMpBtAZGZ/edit?usp=sharing&ouid=112982673713668978351&rtpof=true&sd=true" target="_blank"><img
             src={about}
             alt=""
           />

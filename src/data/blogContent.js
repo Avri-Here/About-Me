@@ -4,7 +4,7 @@ import svgAdvantages from "../images/svg-advantages-and-disadvantages.jpg";
 import jsIcon from "../images/js-icon.png";
 export const BlogContent = [
   {
-    link: "https://enjeck.com/blog",
+    link: "https://Enjeck.com/blog",
     img: svgAdvantages,
     icon: jsIcon,
     name: "Advantages and disadvantages of SVG",
@@ -15,7 +15,7 @@ export const BlogContent = [
     date: "15 hours ago"
   },
   {
-    link: "https://enjeck.com/blog",
+    link: "https://Enjeck.com/blog",
     img: distanceTwoLoc,
     icon: jsIcon,
     name: "How to calculate the distance between two locations using JavaScript",
@@ -27,7 +27,7 @@ export const BlogContent = [
     date: "2 days ago"
   },
   {
-    link: "https://enjeck.com/blog",
+    link: "https://Enjeck.com/blog",
     img: geolocation,
     icon: jsIcon,
     name: "How to calculate the distance between two locations using JavaScript",

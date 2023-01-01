@@ -17,7 +17,7 @@ export const Content = [
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/TutCode",
+    link: "https://github.com/Avri-Here/TutCode",
     name: "TutCode - site to simultaneously  view tutorials and code",
     excerpt: `A website where people can simultaneously code and watch/read
     tutorials. It's a more convenient way to learn and practice
@@ -32,14 +32,14 @@ export const Content = [
   },
   {
     category: "works",
-    link: "https://enjeck.com/",
+    link: "https://Enjeck.com/",
     name: "Personal Website",
     excerpt: `My personal website, designed and developed from scratch. It
     features a lot of hover effects, custom styling and a blog.`
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/libre-logos",
+    link: "https://github.com/Avri-Here/libre-logos",
     name: "Libre Logos",
     excerpt: `A project to provide free logos to open source projects.
     Website and logos designed and built by yours truly. 
@@ -48,7 +48,7 @@ export const Content = [
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/jpg2svg",
+    link: "https://github.com/Avri-Here/jpg2svg",
     name: "jpg2svg",
     excerpt: `An program to convert JPG/JPEG images into SVG. It comes with a web interface where 
     you can upload an image, have it converted to SVG in the server, and you can 
@@ -56,7 +56,7 @@ export const Content = [
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/CrazyPassword",
+    link: "https://github.com/Avri-Here/CrazyPassword",
     name: "Crazy Password",
     excerpt: `A password validation game with ridiculous requirements. 
     Using Django for this project was overkill, but I really wanted to 
@@ -65,7 +65,7 @@ export const Content = [
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/Geo-Guess",
+    link: "https://github.com/Avri-Here/Geo-Guess",
     name: "Geo Guess",
     excerpt: `A distance guessing game. You are shown random cities around the world,
     and you have to guess how far you are from the random city. The better your
@@ -73,13 +73,13 @@ export const Content = [
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/btns",
+    link: "https://github.com/Avri-Here/btns",
     name: "btns",
     excerpt: `A collection of buttons with cool hover effects.`,
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/Blobby",
+    link: "https://github.com/Avri-Here/Blobby",
     name: "Blobby",
     excerpt: `
     Generative blob SVG characters using Python. No characters are the same! 
@@ -88,14 +88,14 @@ export const Content = [
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/Google-Sheet-to-website",
+    link: "https://github.com/Avri-Here/Google-Sheet-to-website",
     name: "Sheet to Site",
     excerpt: `An experiment with building a website directly from Google Sheets. You edit a spreadsheet,
     enter a link to the spreadsheet, and your changes are reflected on the website. `
   },
   {
     category: "works",
-    link: "https://github.com/enjeck/CryptoAlgoVisualizer",
+    link: "https://github.com/Avri-Here/CryptoAlgoVisualizer",
     name: "Crypto Algorithm Visualizer",
     excerpt: `Visualizations of various cryptography algorithms. 
     Currently has Caesar's Cipher and Mono Alphabetic Cipher.`,
@@ -103,7 +103,7 @@ export const Content = [
 
   {
     category: "writing",
-    link: "https://enjeck.com/blog",
+    link: "https://Enjeck.com/blog",
     name: "Advantages and disadvantages of SVG",
     excerpt: `Created in 1999, SVG has grown to become the most popular vector 
     image format for the web. This article will cover the advantages and disadvantages 
@@ -111,7 +111,7 @@ export const Content = [
   },
   {
     category: "writing",
-    link: "https://enjeck.com/blog",
+    link: "https://Enjeck.com/blog",
     name: "How to calculate the distance between two locations using JavaScript",
     excerpt: `The most popular way of calculating the distance between two points on a 
     sphere is using the Haversine equation. 
@@ -120,7 +120,7 @@ export const Content = [
   },
   {
     category: "writing",
-    link: "https://enjeck.com/blog",
+    link: "https://Enjeck.com/blog",
     name: "How to calculate the distance between two locations using JavaScript",
     excerpt: `Knowing a user's location can be a very important feature of a web app. 
     You can use the location information to personalise the user experience,
@@ -136,7 +136,7 @@ export const Content = [
   },
   {
     category: "social",
-    link: "https://github.com/enjeck",
+    link: "https://github.com/Avri-Here",
     name: "GitHub",
     excerpt: `View my projects and code.`
   }

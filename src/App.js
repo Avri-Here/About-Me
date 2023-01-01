@@ -4,9 +4,7 @@ import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Link,
-  Redirect
+  Switch
 } from "react-router-dom";
 import about from "./pages/about";
 import works from "./pages/works";
@@ -14,7 +12,6 @@ import Home from "./pages/home";
 import writing from "./pages/writing";
 import social from "./pages/social";
 import AllResults from "./pages/allResults";
-import NotFound from "./pages/notFound";
 import ProjectsPage from "./pages/projectsPage";
 import ImagesPage from "./pages/imagesPage";
 import BlogPage from "./pages/blogPage";
@@ -33,7 +30,6 @@ class App extends Component {
           <Route path="/projects" component={ProjectsPage} />
           <Route path="/images" component={ImagesPage} />
           <Route path="/blog" component={BlogPage} />
-          <Route component={NotFound} />
         </Switch>
       </Router>
     );

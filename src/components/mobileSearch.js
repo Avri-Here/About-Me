@@ -98,25 +98,18 @@ const MobileSearch = () => {
     } else {
       closeIcon.style.display = "none";
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Leave the mobile search area when the back icon is pressed
   function goBack() {
     document.querySelector(".mobile-search-box").style.display = "none";
-    // Unhide the rest of the body
-    // document.querySelector("body").style.height = "100%";
-    // document.querySelector("body").style.overflow = "scroll";
+
   }
 
   function useOutsideHandler(ref) {
     useEffect(() => {
-      // Unhide the rest of the body when user leaves the mobile search area
       function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          // document.querySelector("body").style.height = "100%";
-      //  document.querySelector("body").style.overflow = "scroll";
-        }
+
       }
 
       document.addEventListener("mousedown", handleClickOutside);

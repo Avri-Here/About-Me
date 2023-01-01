@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-
+import Me from "../images/Me.png"
 const ProfileMenuDrop = () => {
   const [isProfileActive, setProfileActive] = useState("false");
   // Toggle the dropdown
@@ -38,7 +38,7 @@ const ProfileMenuDrop = () => {
     >
       <img
         className="profile-pic dropbtn"
-        src="https://i.pinimg.com/474x/ca/a9/35/caa9352cd119efe5641d6f7c3cc755fb.jpg"
+        src={Me}
         alt="profile"
       />
       <div id="scroll"
@@ -51,21 +51,21 @@ const ProfileMenuDrop = () => {
         <div className="first-detail">
           <img
             className=""
-            src="https://i.pinimg.com/474x/ca/a9/35/caa9352cd119efe5641d6f7c3cc755fb.jpg"
+            src={Me}
             alt="profile"
           />
           <p className="detail-text"> Avri Yom Tov </p>
           <br />
           <p className="detail-text"> Yoti1492@gmail.com </p>
           <br />
-          <a href="https://enjeck.com"> View Another Website Design </a>
+          <a> All about me ! </a>
         </div>
         <Link className="second-detail" to="/about">
           <FontAwesomeIcon className="fa-user-plus" icon={faUserPlus} />
           <p> More about me </p>
         </Link>
         <div className="third-detail">
-          <a href="https://github.com/enjeck"> GitHub</a>
+          <a href="https://github.com/Avri-Here"> GitHub</a>
         </div>
         <div className="fourth-detail">
           <a href="https://github.com/PROTechThor/gfolio"> View code </a> <span> • </span>
