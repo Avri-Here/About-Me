@@ -6,18 +6,18 @@ import AllResultsCard from "../components/allResultsCard";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import FilterMenu from "../components/filtermenu";
+import projects from "../data/projects";
 
 function Works() {
-  const works = Content.filter((item) => item.category === "works");
   return (
     <div className="main">
       <Header />
       <FilterMenu />
       <div className="all-results-container">
         <p className="result-count">
-          About {works.length} results (0.43 seconds)
+          About {projects.length} results (0.43 seconds)
         </p>
-        <AllResultsCard results={works} />
+        <AllResultsCard projects={projects} />
       </div>
       <Footer />
     </div>

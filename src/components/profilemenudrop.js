@@ -65,7 +65,7 @@ const ProfileMenuDrop = () => {
           <p> More about me </p>
         </Link>
         <div className="third-detail">
-          <a href="https://github.com/Avri-Here"> GitHub</a>
+          <a href="https://github.com/Avri-Here" target="_blank"> GitHub</a>
         </div>
         <div className="fourth-detail">
           <a href="https://github.com/PROTechThor/gfolio"> View code </a> <span> • </span>

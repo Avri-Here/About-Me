@@ -6,7 +6,7 @@ import {
   faTimes,
   faHistory
 } from "@fortawesome/free-solid-svg-icons";
-import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 import MobileSearch from "./mobileSearch";
 
 const TopSearchBox = () => {
@@ -109,7 +109,7 @@ const TopSearchBox = () => {
   }
 
   // Search Website, which works by pushing search term to the url
-  const history = useHistory();
+  const history = useNavigate();
   const searchWebsite = () => {
     let path = document.querySelector(".search-input").value;
     if (path) {

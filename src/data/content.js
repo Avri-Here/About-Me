@@ -130,7 +130,7 @@ export const Content = [
 
   {
     category: "social",
-    link: "https://www.linkedin.com/in/c1e0/",
+    link: "https://www.linkedin.com/in/avraham-yom-tov-a74525231/",
     name: "LinkedIn",
     excerpt: `Connect and share experiences`
   },

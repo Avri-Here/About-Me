@@ -5,12 +5,12 @@ import Logo from "../components/logo";
 import SearchBox from "../components/searchbox";
 import BoxMenuDrop from "../components/boxmenudrop";
 import ProfileMenuDrop from "../components/profilemenudrop";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Content } from "../data/content";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const history = useHistory();
+  const history = useNavigate();
 
   // These values will be shown in the search dropdown
   // The name property is the actual text and the value property is the link
@@ -113,26 +113,12 @@ function Home() {
       <footer className="footer">
         <div className="footer-links">
           <div className="footer-links-section">
-            <Link to="/about"> About </Link>
-            <Link to="/projects"> Projects </Link>
-            <Link to="/blog"> Blog</Link>
-            <a href="mailto:Yoti1492@gmail.com"> Email </a>
+            <a href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?rtpof=true&sd=true" target="_blank">About </a>
+            <Link to="/works"> Projects </Link>
           </div>
           <div className="footer-links-section">
-            <a href="https://github.com/Avri-Here"> GitHub </a>
-            <a href="https://www.linkedin.com/in/c1e0/"> LinkedIn </a>
-            <a href="mailto:Yoti1492@gmail.com"> Email </a>
-            {/* <div className="settings-dropdown">
-              <button className="settings-dropbtn"> Settings </button>
-              <div className="settings-dropdown-content">
-                <a href="/">Link 1</a>
-                <a href="/">Link 2</a>
-                <a href="/">Link 3</a>
-                <a className="dark-mode-btn" href="/">
-                  Link 4
-                </a>
-              </div>
-            </div> */}
+            <a href="https://github.com/Avri-Here" target="_blank"> GitHub </a>
+            <a href="https://www.linkedin.com/in/avraham-yom-tov-a74525231/" target="_blank"> LinkedIn </a>
           </div>
         </div>
       </footer>

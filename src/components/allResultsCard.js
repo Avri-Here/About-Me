@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./allResultsCard.css";
 
-const AllResultsCard = ({ results }) => {
-  const [filteredResults] = useState(results);
+const Allprojects = ({ projects }) => {
+  const [filteredResults] = useState(projects);
   function formatURL(u) {
     // Split a given url into its various parts
     let urltext = u;
@@ -20,9 +20,8 @@ const AllResultsCard = ({ results }) => {
     <div className="results-content">
       {filteredResults.map((item) => (
         <div className="result-card">
-          <a href={`${item.link}`}>
+          <a target="_blank" href={`${item.link}` }>
             <p> 
-             {/* Format URl with angle brackets between parts */}
               {`${formatURL(item.link)[0]}`}  
               {formatURL(item.link)[1].map((path) => (
                 <span>{` › ${path}`}</span>
@@ -37,8 +36,9 @@ const AllResultsCard = ({ results }) => {
   );
 };
 
-AllResultsCard.propTypes = {
+Allprojects.propTypes = {
   results: PropTypes.array
 };
 
-export default AllResultsCard;
+
+export default Allprojects;

@@ -7,7 +7,7 @@ import {
   faArrowLeft
 } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
-import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 
 const MobileSearch = () => {
 
@@ -59,7 +59,7 @@ const MobileSearch = () => {
   }
 
   // Search Website by pushing search term into url
-  const history = useHistory();
+  const history = useNavigate();
   const searchWebsite = () => {
     let path = document.querySelector(".mobile-search-input").value;
     if (path) {
@@ -148,8 +148,8 @@ const MobileSearch = () => {
           </div>
           <div className="mobile-search-select">
             <div className="mobile-search-options">
-              {options.map((option) => (
-                <div className="mobile-search-option" type="button">
+              {options.map((option, index) => (
+                <div className="mobile-search-option" type="button" key={index.toString()}>
                   <span>
                     <span>
                       <FontAwesomeIcon className="clock-icon" icon={faClock} />

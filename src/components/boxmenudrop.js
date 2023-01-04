@@ -59,7 +59,7 @@ const BoxMenuDrop = () => {
               src={logo}
               alt=""
             />
-            <p> Search </p>
+            <p> Home </p>
           </Link>
           <a className="drop-link" href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?usp=sharingoogle.com/document/d/1IWAQSObE0iCIvH_oAI1wvzHuMpBtAZGZ/edit?usp=sharing&ouid=112982673713668978351&rtpof=true&sd=true" target="_blank"><img
             src={about}
@@ -71,7 +71,7 @@ const BoxMenuDrop = () => {
               src={suitcase}
               alt=""
             />
-            <p> Works </p>
+            <p> My projects </p>
           </Link >
           <Link className="drop-link" to="/images">
             <img
@@ -80,38 +80,19 @@ const BoxMenuDrop = () => {
             />
             <p> Images </p>
           </Link >
-          <a className="drop-link" href="https://github.com/Avri-Here">
+          <a target="_blank" className="drop-link" href="https://github.com/Avri-Here">
             <img
               src={gh}
               alt=""
             />
             <p> GitHub </p>
           </a>
-          <a className="drop-link" href="https://www.linkedin.com/in/c1e0/">
+          <a className="drop-link" target="_blank" href="https://www.linkedin.com/in/avraham-yom-tov-a74525231/">
             <img
               src={li}
               alt=""
             />
             <p> LinkedIn </p>
-          </a>
-          <a className="drop-link" href="https://www.google.co.il/" target="_blank"><img
-            src={googleIconSearch}
-            alt=""
-          />
-            <p> Google </p></a>
-          <a className="drop-link" href="https://www.w3schools.com/">
-            <img
-              src={w3schools}
-              alt=""
-            />
-            <p>W3schools</p>
-          </a>
-          <a className="drop-link" href="https://chat.openai.com/">
-            <img
-              src={gpt}
-              alt=""
-            />
-            <p>ChatGpt</p>
           </a>
 
         </div>

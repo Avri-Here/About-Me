@@ -9,7 +9,7 @@ import {
 import {
   BrowserRouter as Router,
   Link,
-  useHistory
+  useNavigate
 } from "react-router-dom";
 import MobileSearch from "./mobileSearch";
 import { Content } from "../data/content";
@@ -139,7 +139,7 @@ const SearchBox = (props) => {
   }, []);
 
   // "Search" Website, which works by pushing the search term to the url and redirecting to it
-  const history = useHistory();
+  const history = useNavigate();
   const searchWebsite = () => {
     let path = document.querySelector(".search-input").value;
     if (path) {
@@ -192,8 +192,8 @@ const SearchBox = (props) => {
             </div>
             <div className="search-select">
               <div className="search-options">
-                {props.options.map((option) => (
-                  <div className="search-option" type="button">
+                {props.options.map((option, index) => (
+                  <div className="search-option" type="button" key={index.toString()}>
                     <span>
                       <FontAwesomeIcon
                         className="fas"

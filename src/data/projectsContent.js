@@ -1,6 +1,6 @@
 import tutcode from "../images/tutcode.png";
 import enjeck from "../images/enjeck.png";
-import ll from "../images/libre-logos.svg";
+// import ll from "../images/libre-logos.svg";
 import gfolio from "../images/gfolio.png";
 import jpg2svg from "../images/jpg2svg.png";
 import gg from "../images/geo-guess.png";
@@ -35,7 +35,7 @@ export const ProjectsContent = [
   },
   {
     link: "https://github.com/Avri-Here/libre-logos",
-    img: ll,
+    img: tutcode,
     name: "Libre Logos",
     excerpt: `A project to provide free logos to open source projects.
     Website and logos designed and built by yours truly. 
