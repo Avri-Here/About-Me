@@ -4,18 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
   faTimes,
-  faHistory
+  faHistory,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  BrowserRouter as Router,
-  Link,
-  useNavigate
-} from "react-router-dom";
+import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 import MobileSearch from "./mobileSearch";
 import { Content } from "../data/content";
 
 const SearchBox = (props) => {
-
   // Get url pathname to use as search value
   const urlPathname = window.location.pathname;
   var rx = /[^/](.*)/g;
@@ -29,7 +24,7 @@ const SearchBox = (props) => {
     verticalAlign: "middle",
     marginRight: 10,
     fontSize: "13px",
-    color: "#aaa"
+    color: "#aaa",
   };
 
   const removeBtnStyle = {
@@ -42,20 +37,20 @@ const SearchBox = (props) => {
     background: "transparent",
     float: "right",
     padding: "10px",
-    cursor: "pointer"
+    cursor: "pointer",
   };
 
   const [isSearchActive, setSearchActive] = useState("false");
 
   function showOptions() {
-    let el = document.querySelector(".search-select");
-    el.style.display = "block";
+    // let el = document.querySelector(".search-select");
+    // el.style.display = "block";
 
     if (window.innerWidth < 768) {
       /* Display another search bar on mobile screens */
-      document.querySelector(".mobile-search-box").style.display = "block";
+      // document.querySelector(".mobile-search-box").style.display = "block";
       /* Hide other search options on mobile screens */
-      document.querySelector(".search-select").style.display = "none";
+      // document.querySelector(".search-select").style.display = "none";
 
       /* Hide body when mobile search area is active */
       // document.querySelector("body").style.height = "100vh";
@@ -63,7 +58,7 @@ const SearchBox = (props) => {
 
       /* Focus on search input so that user can begin typing 
       immediately without having to click on it first*/
-      document.querySelector(".mobile-search-input").focus()
+      // document.querySelector(".mobile-search-input").focus();
     }
   }
 
@@ -75,16 +70,16 @@ const SearchBox = (props) => {
     }, 200);
   }
 
-  useEffect(() => {
-    const clearBtn = document.querySelector(".clear-icon");
-    let input = document.querySelector(".search-input").value;
-    // Only show the clear button when the input field is nonempty
-    if (input) {
-      clearBtn.style.display = "none";
-    } else {
-      clearBtn.style.display = "inline-block";
-    }
-  }, []);
+  // useEffect(() => {
+  //   const clearBtn = document.querySelector(".clear-icon");
+  //   let input = document.querySelector(".search-input").value;
+  //   // Only show the clear button when the input field is nonempty
+  //   if (input) {
+  //     clearBtn.style.display = "none";
+  //   } else {
+  //     clearBtn.style.display = "inline-block";
+  //   }
+  // }, []);
 
   /// Remove option upon button click
   function removeOption(i) {
@@ -113,61 +108,65 @@ const SearchBox = (props) => {
       document.querySelector(".search").style.boxShadow = `none`;
     }
   };
-
-  useEffect(() => {
-    // Trigger search when enter key is pressed
-    let inputField = document.querySelector(".search-input");
-    inputField.addEventListener("keyup", function (event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        searchWebsite();
-      }
-    });
-
-    // As soon as the page loads, show the clear button if the search input field is nonempty
-    let closeIcon = document.querySelector(".clear-icon");
-    let searchValue = document.querySelector(".search-input").value;
-    if (searchValue) {
-      closeIcon.style.display = "inline-block";
-      document.querySelector(
-        ".search"
-      ).style.boxShadow = `1px 1px 6px rgba(0,0,0,0.2)`;
-    } else {
-      closeIcon.style.display = "none";
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // "Search" Website, which works by pushing the search term to the url and redirecting to it
-  const history = useNavigate();
   const searchWebsite = () => {
     let path = document.querySelector(".search-input").value;
     if (path) {
-      history.push(path);
+      sessionStorage.setItem("search-input", path);
+      // history.push(path);
     }
   };
+  // useEffect(() => {
+  //   // Trigger search when enter key is pressed
+  //   let inputField = document.querySelector(".search-input");
+  //   inputField.addEventListener("keyup", function (event) {
+  //     if (event.keyCode === 13) {
+  //       event.preventDefault();
+  //       searchWebsite();
+  //     }
+  //   });
 
-  // I'm Feeling Lucky search
-  function feelingLucky() {
-    let path = document.querySelector(".search-input").value;
+  //   // As soon as the page loads, show the clear button if the search input field is nonempty
+  //   let closeIcon = document.querySelector(".clear-icon");
+  //   let searchValue = document.querySelector(".search-input").value;
+  //   if (searchValue) {
+  //     closeIcon.style.display = "inline-block";
+  //     document.querySelector(
+  //       ".search"
+  //     ).style.boxShadow = `1px 1px 6px rgba(0,0,0,0.2)`;
+  //   } else {
+  //     closeIcon.style.display = "none";
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
-    // Route to random page if search input is empty
-    if (!path) {
-      history.push(`/${props.options[Math.floor(Math.random() * props.options.length)].value}`);
-      return;
-    }
+  // // "Search" Website, which works by pushing the search term to the url and redirecting to it
+  // const history = useNavigate();
 
-    /* Get all elements matching the search term */
-    const item = Content.filter((item) => item.category === path);
-    // Get the link of the first match
-    // Redirect to first match, if it exists
-    if (item[0]) {
-      const url = item[0].link;
-      window.location.href = url;
-    } else if (path) {
-      history.push(path);
-    }
-  }
+  // // I'm Feeling Lucky search
+  // function feelingLucky() {
+  //   let path = document.querySelector(".search-input").value;
+
+  //   // Route to random page if search input is empty
+  //   if (!path) {
+  //     history.push(
+  //       `/${
+  //         props.options[Math.floor(Math.random() * props.options.length)].value
+  //       }`
+  //     );
+  //     return;
+  //   }
+
+  //   /* Get all elements matching the search term */
+  //   const item = Content.filter((item) => item.category === path);
+  //   // Get the link of the first match
+  //   // Redirect to first match, if it exists
+  //   if (item[0]) {
+  //     const url = item[0].link;
+  //     window.location.href = url;
+  //   } else if (path) {
+  //     history.push(path);
+  //   }
+  // }
 
   return (
     <div>
@@ -191,9 +190,13 @@ const SearchBox = (props) => {
               />
             </div>
             <div className="search-select">
-              <div className="search-options">
+              {/* <div className="search-options">
                 {props.options.map((option, index) => (
-                  <div className="search-option" type="button" key={index.toString()}>
+                  <div
+                    className="search-option"
+                    type="button"
+                    key={index.toString()}
+                  >
                     <span>
                       <FontAwesomeIcon
                         className="fas"
@@ -218,7 +221,7 @@ const SearchBox = (props) => {
                     </span>
                   </div>
                 ))}
-              </div>
+              </div> */}
               {
                 <div
                   className="search-btns"
@@ -234,7 +237,7 @@ const SearchBox = (props) => {
                     className="search-btn ifl"
                     type="button"
                     value="I'm Feeling Lucky"
-                    onClick={feelingLucky}
+                    onClick={searchWebsite}
                   />
                 </div>
               }

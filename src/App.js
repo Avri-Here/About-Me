@@ -5,13 +5,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import about from "./pages/about";
 import Works from "./pages/works";
 import Home from "./pages/home";
-import writing from "./pages/writing";
+import SearchResults from "./pages/SearchResults";
 import social from "./pages/social";
 import AllResults from "./pages/allResults";
 import ProjectsPage from "./pages/projectsPage";
 import ImagesPage from "./pages/imagesPage";
 import BlogPage from "./pages/blogPage";
-
 
 export default function App() {
   return (
@@ -22,6 +21,7 @@ export default function App() {
           <Route path="Home" element={<Home />} />
           <Route path="images" element={<ImagesPage />} />
           <Route path="works" element={<Works />} />
+          <Route path="SearchResults" element={<SearchResults />} />
         </Route>
       </Routes>
     </BrowserRouter>

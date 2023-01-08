@@ -32,9 +32,10 @@ function Home() {
   // Website search
   const searchWebsite = () => {
     let path = document.querySelector(".search-input").value;
+    sessionStorage.setItem("search-input", path);
     // When search is triggered, add the value entered into the search bar to the url
     if (path) {
-      history.push(path);
+      // history.push(path);
     }
   };
 
@@ -56,7 +57,7 @@ function Home() {
 
     // Route to random page if search input is empty
     if (!path) {
-      history.push(`/${options[Math.floor(Math.random() * options.length)].value}`);
+      // history.push(`/${options[Math.floor(Math.random() * options.length)].value}`);
       return;
     }
 
@@ -69,7 +70,7 @@ function Home() {
       const url = item[0].link;
       window.location.href = url;
     } else if (path) {
-      history.push(path);
+      // history.push(path);
     }
   }
 
@@ -104,7 +105,7 @@ function Home() {
               className="search-btn ifl"
               type="button"
               value="I'm Feeling Lucky"
-              onClick={feelingLucky}
+              onClick={searchWebsite}
             />
           </div>
         </div>
