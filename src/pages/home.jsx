@@ -1,41 +1,58 @@
-import "../styles.css";
-import "../search.css";
+import "../style/styles.css";
+import "../style/search.css";
 import React, { Component, useEffect } from "react";
 import Logo from "../components/logo";
+import axios from "axios";
+import Swal from "sweetalert2";
 import SearchBox from "../components/searchbox";
 import BoxMenuDrop from "../components/boxmenudrop";
 import ProfileMenuDrop from "../components/profilemenudrop";
 import { useNavigate } from "react-router-dom";
-import { Content } from "../data/content";
+// import { Content } from "../data/content";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const history = useNavigate();
-
-  // These values will be shown in the search dropdown
-  // The name property is the actual text and the value property is the link
+  const navigate = useNavigate();
   const options = [
     {
       name: "everything about you",
-      value: "all"
+      value: "all",
     },
     {
       name: "about",
-      value: "about"
+      value: "about",
     },
     { name: "works", value: "works" },
     { name: "writing", value: "writing" },
     { name: "images", value: "images" },
-    { name: "social", value: "social" }
+    { name: "social", value: "social" },
   ];
 
   // Website search
   const searchWebsite = () => {
     let path = document.querySelector(".search-input").value;
-    sessionStorage.setItem("search-input", path);
-    // When search is triggered, add the value entered into the search bar to the url
+
     if (path) {
       // history.push(path);
+      Swal.fire({
+        title: "Searching now !",
+        html: "I will close in <b></b> milliseconds.",
+        timerProgressBar: true,
+        didOpen: async () => {
+          Swal.showLoading();
+          try {
+            const result = await axios.get(
+              "http://localhost:3001/search?search=" + path
+            );
+            sessionStorage.setItem("result", JSON.stringify(result.data));
+            Swal.close();
+            navigate("SearchResults")
+
+          } catch (error) {
+            Swal.close();
+          }
+        },
+      });
     }
   };
 
@@ -62,16 +79,16 @@ function Home() {
     }
 
     /* Get all elements matching the search term */
-    const item = Content.filter((item) => item.category === path);
+    // const item = Content.filter((item) => item.category === path);
 
     // Get the link of the first match
     // Redirect to first match, if it exists
-    if (item[0]) {
-      const url = item[0].link;
-      window.location.href = url;
-    } else if (path) {
-      // history.push(path);
-    }
+    // if (item[0]) {
+    //   const url = item[0].link;
+    //   window.location.href = url;
+    // } else if (path) {
+    //   // history.push(path);
+    // }
   }
 
   return (
@@ -114,12 +131,26 @@ function Home() {
       <footer className="footer">
         <div className="footer-links">
           <div className="footer-links-section">
-            <a href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?rtpof=true&sd=true" target="_blank">About </a>
+            <a
+              href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?rtpof=true&sd=true"
+              target="_blank"
+            >
+              About{" "}
+            </a>
             <Link to="/works"> Projects </Link>
           </div>
           <div className="footer-links-section">
-            <a href="https://github.com/Avri-Here" target="_blank"> GitHub </a>
-            <a href="https://www.linkedin.com/in/avraham-yom-tov-a74525231/" target="_blank"> LinkedIn </a>
+            <a href="https://github.com/Avri-Here" target="_blank">
+              {" "}
+              GitHub{" "}
+            </a>
+            <a
+              href="https://www.linkedin.com/in/avraham-yom-tov-a74525231/"
+              target="_blank"
+            >
+              {" "}
+              LinkedIn{" "}
+            </a>
           </div>
         </div>
       </footer>

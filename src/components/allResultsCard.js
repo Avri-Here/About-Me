@@ -8,24 +8,23 @@ const Allprojects = ({ projects }) => {
     // Split a given url into its various parts
     let urltext = u;
     let url = new URL(urltext);
-    let domain = url.origin
-    let pathname = url.pathname
-    let paths = pathname.split('/');
+    let domain = url.origin;
+    let pathname = url.pathname;
+    let paths = pathname.split("/");
     paths = paths.filter(Boolean);
-    return [domain, paths]
+    return [domain, paths];
   }
-  
 
   return (
     <div className="results-content">
-      {filteredResults.map((item) => (
-        <div className="result-card">
-          <a target="_blank" href={`${item.link}` }>
-            <p> 
-              {`${formatURL(item.link)[0]}`}  
+      {filteredResults.map((item, index) => (
+        <div className="result-card" key={index}>
+          <a target="_blank" href={`${item.link}`}>
+            <p>
+              {`${formatURL(item.link)[0]}`}
               {formatURL(item.link)[1].map((path) => (
-                <span>{` › ${path}`}</span>
-              ))  }
+                <span key={path}>{` › ${path}`}</span>
+              ))}
             </p>
             <h3>{`${item.name}`}</h3>
           </a>
@@ -37,8 +36,7 @@ const Allprojects = ({ projects }) => {
 };
 
 Allprojects.propTypes = {
-  results: PropTypes.array
+  results: PropTypes.array,
 };
-
 
 export default Allprojects;

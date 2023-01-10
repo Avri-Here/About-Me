@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 import MobileSearch from "./mobileSearch";
-import { Content } from "../data/content";
+// import { Content } from "../data/content";
 
 const SearchBox = (props) => {
   // Get url pathname to use as search value
@@ -112,6 +112,7 @@ const SearchBox = (props) => {
     let path = document.querySelector(".search-input").value;
     if (path) {
       sessionStorage.setItem("search-input", path);
+      
       // history.push(path);
     }
   };

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
   faTimes,
-  faHistory
+  faHistory,
 } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 import MobileSearch from "./mobileSearch";
@@ -13,15 +13,15 @@ const TopSearchBox = () => {
   const options = [
     {
       name: "everything about you",
-      value: "all"
+      value: "all",
     },
     {
       name: "about",
-      value: "about"
+      value: "about",
     },
     { name: "works", value: "works" },
     { name: "writing", value: "writing" },
-    { name: "social", value: "social" }
+    { name: "social", value: "social" },
   ];
 
   // Get url pathname to use as search value
@@ -37,7 +37,7 @@ const TopSearchBox = () => {
     verticalAlign: "middle",
     marginRight: 10,
     fontSize: "13px",
-    color: "#aaa"
+    color: "#aaa",
   };
 
   const removeBtnStyle = {
@@ -50,30 +50,28 @@ const TopSearchBox = () => {
     background: "transparent",
     float: "right",
     padding: "10px",
-    cursor: "pointer"
+    cursor: "pointer",
   };
 
-  const [isSearchActive, setSearchActive] = useState("false");
 
   function showOptions() {
-    let el = document.querySelector(".search-select");
-    el.style.display = "block";
+    // let el = document.querySelector(".search-select");
+    // el.style.display = "block";
 
     if (window.innerWidth < 768) {
       /* Display another search bar on mobile screens */
-      document.querySelector(".mobile-search-box").style.display = "block";
+      // document.querySelector(".mobile-search-box").style.display = "block";
       /* Hide other search options on mobile screens */
-      document.querySelector(".search-select").style.display = "none";
-      
+      // document.querySelector(".search-select").style.display = "none";
+
       /* Hide body */
-      document.querySelector("body").style.height = "100vh";
+      // document.querySelector("body").style.height = "100vh";
       // document.querySelector("body").style.overflow = "hidden";
 
       /* Focus on input */
-      document.querySelector(".mobile-search-input").focus()
+      // document.querySelector(".mobile-search-input").focus();
     }
-    document.querySelector(".fa-search-left").style.display = "block";
-  
+    // document.querySelector(".fa-search-left").style.display = "block";
   }
 
   function hideOptions() {
@@ -111,10 +109,10 @@ const TopSearchBox = () => {
   // Search Website, which works by pushing search term to the url
   const history = useNavigate();
   const searchWebsite = () => {
-    let path = document.querySelector(".search-input").value;
-    if (path) {
-      history.push(path);
-    }
+    // let path = document.querySelector(".search-input").value;
+    // if (path) {
+    //   history.push(path);
+    // }
   };
 
   // Only show clear button when search input is nonempty
@@ -162,10 +160,8 @@ const TopSearchBox = () => {
       </div>
       <div className="topmenu-search-box search-box">
         <div className="search-cont">
-        <FontAwesomeIcon 
-        className="fa fa-search-left" 
-        icon={faSearch} />
-        
+          <FontAwesomeIcon className="fa fa-search-left" icon={faSearch} />
+
           <div className="search">
             <div className="search-value">
               <input
@@ -180,8 +176,9 @@ const TopSearchBox = () => {
             </div>
             <div className="search-select">
               <div className="search-options">
-                {options.map((option) => (
+                {options.map((option, index) => (
                   <div
+                    key={index.toString()}
                     className="topmenu-search-option search-option"
                     type="button"
                   >
@@ -213,13 +210,13 @@ const TopSearchBox = () => {
             </div>
           </div>
           <div className="searchbox-icons">
-          <FontAwesomeIcon
-            className="si fa-times clear-icon"
-            icon={faTimes}
-            title="Clear"
-            onClick={clear}
-          />
-          <FontAwesomeIcon className="si fa-search-right" icon={faSearch} />
+            <FontAwesomeIcon
+              className="si fa-times clear-icon"
+              icon={faTimes}
+              title="Clear"
+              onClick={clear}
+            />
+            <FontAwesomeIcon className="si fa-search-right" icon={faSearch} />
           </div>
         </div>
       </div>
