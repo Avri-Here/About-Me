@@ -2,7 +2,7 @@ import "./style/styles.css";
 import "./style/search.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Works from "./pages/works";
+import Projects from "./pages/Projects";
 import Home from "./pages/home";
 import SearchResultsRender from "./pages/SearchResults";
 import ImagesPage from "./pages/imagesPage";
@@ -21,7 +21,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="Home" element={<Home />} />
           <Route path="images" element={<ImagesPage />} />
-          <Route path="works" element={<Works />} />
+          <Route path="Projects" element={<Projects />} />
           <Route path="SearchResults" element={<SearchResultsRender />} />
           <Route path="contactMe" element={<ContactMe />} />
         </Route>

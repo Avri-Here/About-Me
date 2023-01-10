@@ -137,7 +137,7 @@ function Home() {
             >
               About{" "}
             </a>
-            <Link to="/works"> Projects </Link>
+            <Link to="Projects"> Projects </Link>
           </div>
           <div className="footer-links-section">
             <a href="https://github.com/Avri-Here" target="_blank">

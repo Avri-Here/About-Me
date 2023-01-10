@@ -1,5 +1,5 @@
 import React from "react";
-import "./as.css"
+// import "./as.css"
 export default () => {
   return (
     <div>

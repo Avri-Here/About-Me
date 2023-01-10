@@ -6,7 +6,7 @@ import FilterMenu from "../components/filtermenu";
 import projects from "../data/projects";
 
 
-function Works() {
+function Projects() {
   return (
     <div className="main">
       <Header />
@@ -21,4 +21,4 @@ function Works() {
     </div>
   );
 }
-export default Works;
+export default Projects;

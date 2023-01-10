@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import Me from "../images/Me.png"
+import Me from "../images/Me.png";
 const ProfileMenuDrop = () => {
   const [isProfileActive, setProfileActive] = useState("false");
   // Toggle the dropdown
@@ -36,12 +36,9 @@ const ProfileMenuDrop = () => {
       onClick={handleToggle}
       ref={wrapperProfileRef}
     >
-      <img
-        className="profile-pic dropbtn"
-        src={Me}
-        alt="profile"
-      />
-      <div id="scroll"
+      <img className="profile-pic dropbtn" src={Me} alt="profile" />
+      <div
+        id="scroll"
         className={
           isProfileActive
             ? "profile-details-dropdown dropdown-hide"
@@ -49,27 +46,33 @@ const ProfileMenuDrop = () => {
         }
       >
         <div className="first-detail">
-          <img
-            className=""
-            src={Me}
-            alt="profile"
-          />
+          <img className="" src={Me} alt="profile" />
           <p className="detail-text"> Avri Yom Tov </p>
           <br />
           <p className="detail-text"> Yoti1492@gmail.com </p>
           <br />
-          <a> All about me ! </a>
+          <a
+            href="https://github.com/Avri-Here?tab=repositories"
+            target={"_blank"}
+          >
+            {" "}
+            My repositories !{" "}
+          </a>
         </div>
         <Link className="second-detail" to="/about">
           <FontAwesomeIcon className="fa-user-plus" icon={faUserPlus} />
-          <p> More about me </p>
+          <p> Stay in Touch </p>
         </Link>
         <div className="third-detail">
-          <a href="https://github.com/Avri-Here" target="_blank"> GitHub</a>
+          <a href="https://github.com/Avri-Here" target="_blank">
+            {" "}
+            GitHub
+          </a>
         </div>
         <div className="fourth-detail">
-          <a href="https://github.com/PROTechThor/gfolio"> View code </a> <span> • </span>
-          <Link to="/blog"> Blog & news </Link>
+          <a href="https://github.com/Avri-Here/About-me"> View code </a>{" "}
+          <span> • </span>
+          <Link to="images"> Images & Me </Link>
         </div>
       </div>
     </div>

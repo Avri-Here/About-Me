@@ -6,11 +6,7 @@ import { faTh } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/e-logo.png"
 import li from "../images/linkedIn-icon.png"
 import gh from "../images/github-icon.png"
-import googleIconSearch from "../images/IconsLogo/googleIconSearch.png"
 import suitcase from "../images/suitcase.png"
-import email from "../images/gmail-icon.png"
-import w3schools from "../images/IconsLogo/W3Schools_logo.svg.png"
-import gpt from "../images/IconsLogo/gpt.png"
 import img from "../images/image.png"
 import about from "../images/info.png"
 
@@ -66,7 +62,7 @@ const BoxMenuDrop = () => {
             alt=""
           />
             <p> About </p></a>
-          <Link className="drop-link" to="/works">
+          <Link className="drop-link" to="Projects">
             <img
               src={suitcase}
               alt=""
