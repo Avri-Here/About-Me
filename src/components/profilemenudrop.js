@@ -52,10 +52,10 @@ const ProfileMenuDrop = () => {
           <br />
           <a href="https://www.linkedin.com/in/avraham-yom-tov-a74525231/" target={"_blank"}> All about me ! </a>
         </div>
-        <Link className="second-detail" to="/about">
+        <a className="second-detail" href="https://github.com/Avri-Here" >
           <FontAwesomeIcon className="fa-user-plus" icon={faUserPlus} />
           <p> More about me </p>
-        </Link>
+        </a>
         <div className="third-detail">
           <a href="https://github.com/Avri-Here" target="_blank">
             {" "}
@@ -64,7 +64,7 @@ const ProfileMenuDrop = () => {
         </div>
         <div className="fourth-detail">
           <a href="https://splendid-tartufo-33b42a.netlify.app/" target={"_blank"} > Keep in touch</a> <span> • </span>
-          <a href=""> View code </a>
+          <a href="https://github.com/Avri-Here/About-Me.git" target={"_blank"}> View code </a>
         </div>
       </div>
     </div>
