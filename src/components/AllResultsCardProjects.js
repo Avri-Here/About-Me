@@ -1,0 +1,40 @@
+import React, { useState } from "react";
+import "./allResultsCard.css";
+
+const AllResultsCardProjects = ({ projects }) => {
+  const [filteredResults] = useState(projects);
+  function formatURL(u) {
+    // Split a given url into its various parts
+    let urltext = u;
+    let url = new URL(urltext);
+    let domain = url.origin
+    let pathname = url.pathname
+    let paths = pathname.split('/');
+    paths = paths.filter(Boolean);
+    return [domain, paths]
+  }
+  
+
+  return (
+    <div className="results-content">
+      {filteredResults.map((item) => (
+        <div className="result-card">
+          <a target={"_blank"} href={`${item.link}` }>
+            <p> 
+              {`${formatURL(item.link)[0]}`}  
+              {formatURL(item.link)[1].map((path) => (
+                <span>{` › ${path}`}</span>
+              ))  }
+            </p>
+            <h3>{`${item.name}`}</h3>
+          </a>
+          <p className="excerpt">{`${item.excerpt}`}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+
+
+export default AllResultsCardProjects;
