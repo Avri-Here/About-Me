@@ -1,7 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
-// import FilterMenu from "../components/filtermenu";
 import projects from "../data/projects";
+import "./Css/projectsPage.css";
 
 function Projects() {
   function formatURL(u) {
@@ -16,16 +16,15 @@ function Projects() {
   return (
     <div className="main">
       <Header />
-        {/* <FilterMenu /> */}
       <div className="all-results-container">
         <p className="result-count">
-          About {projects.length} results (0.43 seconds)
+          <bold>About {projects.length} results (0.43 seconds)</bold>
         </p>
         <div className="results-content">
           {projects.map((item) => (
             <div className="result-card">
-              <a target={"_blank"} href={`${item.link}`}>
-                <p>
+              <a style={{ color: "blue" }} target={"_blank"} href={`${item.link}`}>
+                <p style={{ color: "black" }}>
                   {`${formatURL(item.link)[0]}`}
                   {formatURL(item.link)[1].map((path) => (
                     <span>{` › ${path}`}</span>
@@ -34,6 +33,8 @@ function Projects() {
                 <h3>{`${item.name}`}</h3>
               </a>
               <p className="excerpt">{`${item.excerpt}`}</p>
+              <br />
+              <hr />
             </div>
           ))}
         </div>

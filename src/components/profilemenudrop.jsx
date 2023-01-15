@@ -1,5 +1,4 @@
-import "./profilemenudrop.css";
-import { Link } from "react-router-dom";
+import "./componentsCss/profilemenudrop.css";
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";

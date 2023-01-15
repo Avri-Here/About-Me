@@ -145,9 +145,13 @@ a:focus {
   .search-input {
     height: 40px !important;
   }
+  .all-results-container {
+    margin-left: 2vw;
+  }
 }
 
-@media screen and (max-width: 500px) {}
+
+@media screen and (max-width: 800px) {}
 
 
 

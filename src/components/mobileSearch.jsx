@@ -1,17 +1,16 @@
-import "./mobileSearch.css";
-import React, { useState, useEffect, useRef } from "react";
+import "./componentsCss/mobileSearch.css";
+import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTimes,
   faArrowLeft
 } from "@fortawesome/free-solid-svg-icons";
-import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const MobileSearch = () => {
 
 
 
-  // Get url pathname to use as search value
   const urlPathname = window.location.pathname;
   var rx = /[^/](.*)/g;
   var arr = rx.exec(urlPathname);
@@ -32,10 +31,7 @@ const MobileSearch = () => {
   }, []);
 
   /// Remove option upon button click
-  function removeOption(i) {
-    // i.remove();
-    i.style.display = "none";
-  }
+
 
   // Clear input field
   function clear() {

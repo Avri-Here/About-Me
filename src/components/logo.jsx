@@ -1,4 +1,4 @@
-import "./logo.css";
+import "./componentsCss/logo.css";
 import React, { useEffect } from "react";
 
 const Logo = () => {

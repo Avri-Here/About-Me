@@ -1,8 +1,7 @@
 import React from "react";
-import "./header.css";
+import "./componentsCss/header.css";
 import { Link } from "react-router-dom";
 import Logo from "./logo";
-import TopSearchBox from "./topSearchbox";
 import BoxMenuDrop from "./boxmenudrop";
 import ProfileMenuDrop from "./profilemenudrop";
 
@@ -14,7 +13,7 @@ const Header = () => {
           <Logo />
         </Link>
         <div className="topmenu-menu-search menu-search">
-          <TopSearchBox />
+          {/* <TopSearchBox /> */}
         </div>
       </div>
       <div className="menu-section">

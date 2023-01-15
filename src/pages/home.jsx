@@ -13,22 +13,7 @@ function Home() {
   const history = useHistory();
 
 
-  const options = [
-    {
-      name: "everything about you",
-      value: "all",
-    },
-    {
-      name: "about",
-      value: "about",
-    },
-    { name: "works", value: "works" },
-    { name: "writing", value: "writing" },
-    { name: "images", value: "images" },
-    { name: "social", value: "social" },
-  ];
 
-  // Website search
   const searchWebsite = () => {
     let path = document.querySelector(".search-input").value;
     if (path) {

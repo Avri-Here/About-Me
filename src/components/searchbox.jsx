@@ -1,14 +1,11 @@
-import "./searchbox.css";
-import React, { useState, useEffect } from "react";
+import "./componentsCss/searchbox.css";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
-  faTimes,
-  faHistory
+  faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  BrowserRouter as Router,
-  Link,
   useHistory
 } from "react-router-dom";
 import MobileSearch from "./mobileSearch";
@@ -25,13 +22,6 @@ const SearchBox = () => {
   }
 
 
-  function hideOptions() {
-    // Delay element hiding by few milliseconds to ensure it can be clicked
-    setTimeout(function () {
-      let el = document.querySelector(".search-select");
-      el.style.display = "none";
-    }, 200);
-  }
 
   useEffect(() => {
     const clearBtn = document.querySelector(".clear-icon");
