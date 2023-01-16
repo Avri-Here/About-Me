@@ -16,17 +16,20 @@
     "@fortawesome/react-fontawesome": "0.1.15",
     "@material-ui/core": "4.12.3",
     "@material-ui/icons": "4.11.2",
+    "axios": "^1.2.2",
     "pexels": "^1.4.0",
     "prop-types": "15.7.2",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "react-router-dom": "5.3.0",
     "react-scripts": "4.0.0",
-    "react-select": "4.3.1"
+    "react-select": "4.3.1",
+    "sweetalert2": "^11.7.0"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "react-error-overlay": "^6.0.9"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
@@ -46,5 +49,8 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
+  },
+  "overrides": {
+    "react-error-overlay": "6.0.9"
   }
 }

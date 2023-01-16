@@ -1,4 +1,3 @@
-import { createClient } from "pexels";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -29,11 +28,7 @@ export default function SearchResults() {
             gap: "2vw",
           }}
         >
-          {imgList.map((item, index) => {
-            return (
-              <img width={300 + "vw"} src={item.src.portrait} key={index} />
-            );
-          })}
+          <h1></h1>
         </div>
       </div>
 

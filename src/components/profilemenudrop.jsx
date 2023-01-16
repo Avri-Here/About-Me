@@ -49,11 +49,17 @@ const ProfileMenuDrop = () => {
           <br />
           <p className="detail-text"> Yoti1492@gmail.com </p>
           <br />
-          <a href="https://www.linkedin.com/in/avraham-yom-tov-a74525231/" target={"_blank"}> All about me ! </a>
+          <a
+            href="https://github.com/Avri-Here?tab=repositories"
+            target={"_blank"}
+          >
+            {" "}
+            My repositories !{" "}
+          </a>
         </div>
-        <a className="second-detail" href="https://github.com/Avri-Here" >
+        <a className="second-detail" href="https://splendid-tartufo-33b42a.netlify.app/" target={"_blank"} >
           <FontAwesomeIcon className="fa-user-plus" icon={faUserPlus} />
-          <p> More about me </p>
+          <p> Stay in Touch </p>
         </a>
         <div className="third-detail">
           <a href="https://github.com/Avri-Here" target="_blank">

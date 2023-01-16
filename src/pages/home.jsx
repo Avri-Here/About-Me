@@ -1,6 +1,7 @@
 import "../styles.css";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { createClient } from 'pexels';
 import React, { useEffect } from "react";
 import Logo from "../components/logo";
 import SearchBox from "../components/searchbox";
@@ -14,30 +15,57 @@ function Home() {
 
 
 
-  const searchWebsite = () => {
-    let path = document.querySelector(".search-input").value;
-    if (path) {
+  const searchImages = () => {
+    let query = document.querySelector(".search-input").value;
+    if (query) {
       Swal.fire({
         title: "Searching now !",
-        html: "I will close in <b></b> milliseconds.",
+        html: "Hope to finish soon .. ",
         timerProgressBar: true,
         didOpen: async () => {
           Swal.showLoading();
-          try {
-            const result = await axios.get(
-              "http://localhost:3001/search?search=" + path
-            );
-            sessionStorage.setItem("result", JSON.stringify(result.data));
+          const client = createClient('563492ad6f91700001000001cdd8e3d1841549b9920090022364ee57');
+          client.photos.search({ query, per_page: 12 }).then(photos => {
+            console.log(photos.photos);
+            sessionStorage.setItem("result", JSON.stringify(photos.photos))
             Swal.close();
             history.push("searchResults");
-          } catch (error) {
+          }).catch((err) => {
             Swal.close();
             Swal.fire({
               icon: "error",
               title: "Oops...",
               text: "Please try again !",
             });
-          }
+            console.log(err);
+          })
+        },
+      });
+    }
+  };
+  const searchJoke = async () => {
+    let query = document.querySelector(".search-input").value;
+    if (query) {
+      Swal.fire({
+        title: "Searching now !",
+        html: "Hope to finish soon .. ",
+        timerProgressBar: true,
+        didOpen: async () => {
+          Swal.showLoading();
+          const client = await axios.get("https://sv443.net/jokeapi/v2/joke/ANY?type=" + query).then(res => {
+            console.log(res.data);
+            sessionStorage.setItem("result", JSON.stringify(res))
+            Swal.close();
+            // history.push("searchResults");
+          }).catch((err) => {
+            Swal.close();
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Please try again !",
+            });
+            console.log(err);
+          })
         },
       });
     }
@@ -49,7 +77,7 @@ function Home() {
     inputField.addEventListener("keyup", function (event) {
       if (event.keyCode === 13) {
         event.preventDefault();
-        searchWebsite();
+        // searchImages();
       }
     });
   }, []);
@@ -74,19 +102,20 @@ function Home() {
           <div className="frontpage-logo">
             <Logo />
           </div>
-          <SearchBox/>
+          <SearchBox />
           <div className="search-btns">
             <input
               className="search-btn sw"
               type="button"
-              value="Search Website"
-              onClick={searchWebsite}
+              value="Search Images"
+              onClick={searchImages}
+
             />
             <input
               className="search-btn ifl"
               type="button"
-              value="I'm Feeling Lucky"
-              onClick={searchWebsite}
+              value="Search A Joke "
+              onClick={searchJoke}
             />
           </div>
         </div>

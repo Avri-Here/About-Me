@@ -1,6 +1,7 @@
 import "./componentsCss/searchbox.css";
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Swal from "sweetalert2";
 import {
   faSearch,
   faTimes
@@ -41,9 +42,24 @@ const SearchBox = () => {
     input.value = "";
   }
 
-  const clearValue = () => {
+  const clearValue = (e) => {
+
+    let pattern = /^[A-Za-z]+$/;
+    let words = e.target.value.split(" ");
+
+    if (words.length !== 1 || !pattern.test(e.target.value)) {
+      Swal.fire({
+        text: 'Search for one word without spaces And only English letters !',
+        target: '#custom-target',
+        toast: true,
+        position: 'center'
+      })
+      e.target.value = "";
+      return;
+    }
     let closeIcon = document.querySelector(".clear-icon");
     let searchValue = document.querySelector(".search-input").value;
+
     if (searchValue) {
       closeIcon.style.display = "inline-block";
       // When the search input is not empty, give it a subtle box shadow
@@ -103,12 +119,16 @@ const SearchBox = () => {
           <div className="search">
             <div className="search-value">
               <input
-                placeholder=" "
+                placeholder="Image search only !"
                 autoComplete="on"
                 className="search-input"
                 defaultValue={val}
-                onChange={clearValue}
+                onChange={(e) => { clearValue(e) }}
+                pattern="[A-Za-z]+"
+                required
+
               />
+              <div id="custom-target"></div>
             </div>
             <div className="search-select">
               <div className="search-options">
