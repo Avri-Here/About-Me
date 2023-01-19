@@ -11,38 +11,24 @@ import a6 from "../images/MyImages/6.jpg"
 import a7 from "../images/MyImages/7.jpg"
 import a8 from "../images/MyImages/8.jpg"
 import a9 from "../images/MyImages/9.jpg"
+
+
+const images = [a1, a2, a3, a4, a5, a6, a7, a8, a9];
+
+
 const ImagesPage = () => {
   return (
     <div className="main">
       <Header />
       <div className="images-content">
-        <div className="images--card">
-          <img src={a1} alt={"a1"} />
-        </div>
-        <div className="images--card">
-          <img src={a2} alt={"a2"} />
-        </div>
-        <div className="images--card">
-          <img src={a3} alt={"a3"} />
-        </div>
-        <div className="images--card">
-          <img src={a4} alt={"a4"} />
-        </div>
-        <div className="images--card">
-          <img src={a5} alt={"a5"} />
-        </div>
-        <div className="images--card">
-          <img src={a6} alt={"a6"} />
-        </div>
-        <div className="images--card">
-          <img src={a7} alt={"a7"} />
-        </div>
-        <div className="images--card">
-          <img src={a8} alt={"a8"} />
-        </div>
-        <div className="images--card">
-          <img src={a9} alt={"a9"} />
-        </div>
+        {images ? images.map((item, index) => {
+          return (<div className="images--card" key={index}>
+            <img src={item}
+              alt={index}
+            />
+          </div>)
+        }) : null}
+
       </div>
       <Footer />
     </div>
