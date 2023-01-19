@@ -17,17 +17,18 @@ function Projects() {
     <div className="main">
       <Header />
       <div className="all-results-container">
-        <p className="result-count">
-          <bold>About {projects.length} results (0.43 seconds)</bold>
+        <p className="result-count" style={{fontSize:"1.2rem", fontWeight: "600"}}>
+          About {projects.length} results (0.43 seconds)
         </p>
+        <br/>
         <div className="results-content">
-          {projects.map((item) => (
-            <div className="result-card">
+          {projects.map((item, index) => (
+            <div className="result-card" key={index}>
               <a style={{ color: "blue" }} target={"_blank"} href={`${item.link}`}>
                 <p style={{ color: "black" }}>
                   {`${formatURL(item.link)[0]}`}
-                  {formatURL(item.link)[1].map((path) => (
-                    <span>{` › ${path}`}</span>
+                  {formatURL(item.link)[1].map((path, index) => (
+                    <span key={index}>{` › ${path}`}</span>
                   ))}
                 </p>
                 <h3>{`${item.name}`}</h3>

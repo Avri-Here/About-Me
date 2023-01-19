@@ -3,17 +3,16 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTh } from "@fortawesome/free-solid-svg-icons";
-import logo from "../images/e-logo.png";
-import li from "../images/linkedIn-icon.png";
-import gh from "../images/github-icon.png";
-import suitcase from "../images/suitcase.png";
-import img from "../images/image.png";
-import about from "../images/info.png";
+import logo from "../images/Save/e-logo.png";
+import li from "../images/Save/linkedIn-icon.png";
+import gh from "../images/Save/github-icon.png";
+import suitcase from "../images/Save/suitcase.png";
+import img from "../images/Save/image.png";
+import about from "../images/Save/info.png";
 
 const BoxMenuDrop = () => {
   const [isActive, setActive] = useState("false");
 
-  // Toggle the dropdown
   const handleToggle = () => {
     setActive(!isActive);
   };
@@ -51,11 +50,11 @@ const BoxMenuDrop = () => {
         <div className="drop-item">
           <Link className="drop-link" to="/">
             <img src={logo} alt="" />
-            <p> Search </p>
+            <p> Home </p>
           </Link>
           <Link className="drop-link" to="/images">
             <img src={img} alt="" />
-            <p>My Images </p>
+            <p>Images </p>
           </Link>
 
           <Link className="drop-link" to="/projects">
@@ -64,11 +63,11 @@ const BoxMenuDrop = () => {
           </Link>
           <a
             className="drop-link"
-            href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?usp=sharingoogle.com/document/d/1IWAQSObE0iCIvH_oAI1wvzHuMpBtAZGZ/edit?usp=sharing&ouid=112982673713668978351&rtpof=true&sd=true"
+            href="https://docs.google.com/document/d/1Di3kbqK4SZkp8YGsaP2b5Xo5x-7GoSdE/edit"
             target="_blank"
           >
             <img src={about} alt="" />
-            <p> About Me</p>
+            <p>Resume</p>
           </a>
           <a
             target="_blank"

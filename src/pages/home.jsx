@@ -1,86 +1,80 @@
 import "../styles.css";
-import axios from "axios";
-import Swal from "sweetalert2";
-import { createClient } from 'pexels';
-import React, { useEffect } from "react";
+import React from "react";
 import Logo from "../components/logo";
 import SearchBox from "../components/searchbox";
 import BoxMenuDrop from "../components/boxmenudrop";
 import ProfileMenuDrop from "../components/profilemenudrop";
-import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const history = useHistory();
 
 
 
-  const searchImages = () => {
-    let query = document.querySelector(".search-input").value;
-    if (query) {
-      Swal.fire({
-        title: "Searching now !",
-        html: "Hope to finish soon .. ",
-        timerProgressBar: true,
-        didOpen: async () => {
-          Swal.showLoading();
-          const client = createClient('563492ad6f91700001000001cdd8e3d1841549b9920090022364ee57');
-          client.photos.search({ query, per_page: 12 }).then(photos => {
-            console.log(photos.photos);
-            sessionStorage.setItem("result", JSON.stringify(photos.photos))
-            Swal.close();
-            history.push("searchResults");
-          }).catch((err) => {
-            Swal.close();
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Please try again !",
-            });
-            console.log(err);
-          })
-        },
-      });
-    }
-  };
-  const searchJoke = async () => {
-    let query = document.querySelector(".search-input").value;
-    if (query) {
-      Swal.fire({
-        title: "Searching now !",
-        html: "Hope to finish soon .. ",
-        timerProgressBar: true,
-        didOpen: async () => {
-          Swal.showLoading();
-          const client = await axios.get("https://sv443.net/jokeapi/v2/joke/ANY?type=" + query).then(res => {
-            console.log(res.data);
-            sessionStorage.setItem("result", JSON.stringify(res))
-            Swal.close();
-            // history.push("searchResults");
-          }).catch((err) => {
-            Swal.close();
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Please try again !",
-            });
-            console.log(err);
-          })
-        },
-      });
-    }
-  };
+  // const searchImages = () => {
+  //   let query = document.querySelector(".search-input").value;
+  //   if (query) {
+  //     Swal.fire({
+  //       title: "Searching now !",
+  //       html: "Hope to finish soon .. ",
+  //       timerProgressBar: true,
+  //       didOpen: async () => {
+  //         Swal.showLoading();
+  //         const client = createClient('563492ad6f91700001000001cdd8e3d1841549b9920090022364ee57');
+  //         client.photos.search({ query, per_page: 12 }).then(photos => {
+  //           console.log(photos.photos);
+  //           if (photos.photos.length === 0) {
+  //             throw new Error("No matching photos found !")
+  //           }
+  //           sessionStorage.setItem("result", JSON.stringify(photos.photos))
+  //           Swal.close();
+  //           history.push("searchResults");
+  //         }).catch((err) => {
+  //           document.querySelector(".search-input").value = ""
+  //           Swal.close();
+  //           Swal.fire({
+  //             icon: "error",
+  //             title: "Oops...",
+  //             text: err.message + "!" || "Please try again !",
+  //           });
+  //           console.log(err);
+  //         })
+  //       },
+  //     });
+  //   }
+  // };
+  // const searchJoke = async () => {
+  //   let query = document.querySelector(".search-input").value;
+  //   if (query) {
+  //     Swal.fire({
+  //       title: "Searching now !",
+  //       html: "Hope to finish soon .. ",
+  //       timerProgressBar: true,
+  //       didOpen: async () => {
+  //         Swal.showLoading();
+  //         const client = await axios.get("https://v2.jokeapi.dev/joke/Programming?type=twopart?safe-mode&contains=" +
+  //           query).then(res => {
+  //             console.log(res.data);
+  //             if (res.data.error) {
+  //               throw new Error(res.data.message)
+  //             }
+  //             sessionStorage.setItem("result", JSON.stringify(res.data))
+  //             Swal.close();
+  //             history.push("SearchResultsJoke");
+  //           }).catch((err) => {
+  //             document.querySelector(".search-input").value = ""
+  //             console.log(err);
+  //             Swal.close();
+  //             Swal.fire({
+  //               icon: "error",
+  //               title: "Oops...",
+  //               text: err.message + " !" || "Please try again !",
+  //             });
+  //           })
+  //       },
+  //     });
+  //   }
+  // };
 
-  useEffect(() => {
-    let inputField = document.querySelector(".search-input");
-    //Trigger search when the enter key is pressed
-    inputField.addEventListener("keyup", function (event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        // searchImages();
-      }
-    });
-  }, []);
 
 
   return (
@@ -103,21 +97,6 @@ function Home() {
             <Logo />
           </div>
           <SearchBox />
-          <div className="search-btns">
-            <input
-              className="search-btn sw"
-              type="button"
-              value="Search Images"
-              onClick={searchImages}
-
-            />
-            <input
-              className="search-btn ifl"
-              type="button"
-              value="Search A Joke "
-              onClick={searchJoke}
-            />
-          </div>
         </div>
       </div>
 
@@ -125,7 +104,8 @@ function Home() {
         <div className="footer-links">
           <div className="footer-links-section">
             <a
-              href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?rtpof=true&sd=true"
+              href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?
+              rtpof=true&sd=true"
               target="_blank"
             >
               About{" "}

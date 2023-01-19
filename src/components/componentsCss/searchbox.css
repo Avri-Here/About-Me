@@ -69,13 +69,9 @@
   height: 11px;
 }
 
-/**
-* Input
-*/
 .search-input {
   display: block;
-  height: 46px;
-  width: 98%;
+  width: auto;
   margin: auto;
   padding: 0 40px 0 36px;
   background: #fff;

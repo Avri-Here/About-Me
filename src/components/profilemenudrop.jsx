@@ -2,7 +2,7 @@ import "./componentsCss/profilemenudrop.css";
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import Me from "../images/Me.png";
+import Me from "../images/Save/Me.png";
 const ProfileMenuDrop = () => {
   const [isProfileActive, setProfileActive] = useState("false");
   // Toggle the dropdown
@@ -68,7 +68,7 @@ const ProfileMenuDrop = () => {
           </a>
         </div>
         <div className="fourth-detail">
-          <a href="https://splendid-tartufo-33b42a.netlify.app/" target={"_blank"} > Keep in touch</a> <span> • </span>
+          <a href="https://docs.google.com/document/d/1pXMp9FGny9bGaZEq64_NX8EVglRdx4TMKV2n47E0tAY/edit?rtpof=true&sd=true" target={"_blank"} >My resume</a> <span> • </span>
           <a href="https://github.com/Avri-Here/About-Me.git" target={"_blank"}> View code </a>
         </div>
       </div>
